@@ -28,7 +28,7 @@ mod api_tests {
             api_url: mock_server,
             api_key: None,
             timeout: std::time::Duration::from_secs(1),
-            max_retries: 1,
+            max_retries: 3,
         };
         
         let client = ApiClient::new(config).unwrap();
@@ -71,7 +71,7 @@ mod api_tests {
             api_url: mock_server,
             api_key: None,
             timeout: std::time::Duration::from_secs(1),
-            max_retries: 1,
+            max_retries: 3,
         };
         
         let client = ApiClient::new(config).unwrap();
@@ -100,7 +100,7 @@ mod api_tests {
             api_url: mock_server,
             api_key: None,
             timeout: std::time::Duration::from_secs(1),
-            max_retries: 1,
+            max_retries: 3,
         };
         
         let client = ApiClient::new(config).unwrap();

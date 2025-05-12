@@ -1,0 +1,29 @@
+[package]
+name = "rust-project-example"
+version = "0.1.0"
+edition = "2021"
+description = "Example Rust project for GitHub API testing"
+authors = ["Test Developer <dev@example.com>"]
+license = "MIT"
+repository = "https://github.com/example/rust-project-example"
+
+[dependencies]
+tokio = { version = "1.28", features = ["full"] }
+reqwest = { version = "0.11", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+chrono = "0.4"
+log = "0.4"
+env_logger = "0.9"
+clap = { version = "4.2", features = ["derive"] }
+async-trait = "0.1.68"
+futures = "0.3"
+
+[dev-dependencies]
+mockito = "1.0"
+tokio-test = "0.4"
+
+[[bin]]
+name = "rust-project-example"
+path = "src/bin/main.rs"

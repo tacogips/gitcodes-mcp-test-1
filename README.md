@@ -1,4 +1,7 @@
-# Rust Project Example
+
+
+# Rust Project Example for testing
+This repository is used to test gitcodes-mcp and other MCP tools.
 
 A multi-module Rust project for testing GitHub API integration.
 

@@ -5,7 +5,7 @@ use std::error::Error;
 #[derive(Parser)]
 #[command(author, version, about, long_about = None)]
 struct Cli {
-    /// API URL to use
+    /// API URL to use .mock
     #[arg(short, long)]
     api_url: Option<String>,
 
@@ -36,7 +36,7 @@ enum Commands {
         /// Resource name
         #[arg(short, long)]
         name: String,
-        
+
         /// Resource type
         #[arg(short, long)]
         resource_type: String,
@@ -50,10 +50,10 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     // Parse command line arguments
     let cli = Cli::parse();
-    
+
     // Create configuration
     let config = create_config(cli.api_url, cli.api_key);
-    
+
     // Process commands
     match &cli.command {
         Commands::Fetch { id } => {
@@ -64,7 +64,10 @@ async fn main() -> Result<(), Box<dyn Error>> {
             println!("Listing up to {} resources:", limit);
             // Implementation would use the client to list resources
         }
-        Commands::Create { name, resource_type } => {
+        Commands::Create {
+            name,
+            resource_type,
+        } => {
             println!("Creating a new {} resource named: {}", resource_type, name);
             // Implementation would use the client to create a resource
         }

@@ -1,0 +1,40 @@
+# Rust specific ignores
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# Editor and IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+
+# Build artifacts
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+
+# Test coverage reports
+coverage/
+*.gcno
+*.gcda
+*.lcov
+
+# Generated documentation
+/doc/
+/docs/
+
+# Log files
+/logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
